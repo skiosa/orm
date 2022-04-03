@@ -1,13 +1,15 @@
-import { Field, ObjectType, ID, InputType } from "type-graphql";
-import { Column, Entity, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Field, ObjectType, ID, InputType, Int } from "type-graphql";
+import { TypeormLoader } from "type-graphql-dataloader";
+import { Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Article } from "./article";
 import { Category } from "./category";
+import { User } from "./user";
 
 @Entity()
 @ObjectType()
 export class Feed {
   @PrimaryGeneratedColumn()
-  @Field((_type) => ID)
+  @Field((_type) => Int)
   id!: number;
 
   @Column()
@@ -26,13 +28,21 @@ export class Feed {
   @Field((_type) => String)
   description!: string;
 
-  @OneToMany(() => Article, (article) => article.id)
+  @OneToMany(() => Article, (article) => article.feed)
   @Field((_type) => [Article])
+  @TypeormLoader()
   articles?: Article[];
 
-  @ManyToMany(() => Category, (category) => category.id)
+  @ManyToMany(() => Category, (category) => category.feeds)
+  @JoinTable()
   @Field((_type) => [Category])
-  category?: Category[];
+  @TypeormLoader()
+  categories?: Category[];
+
+  @ManyToMany(() => User, (user) => user.subscriptions)
+  @Field((_type) => [User])
+  @TypeormLoader()
+  subscribers?: User[];
 }
 
 @InputType()
