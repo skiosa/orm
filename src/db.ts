@@ -3,6 +3,7 @@ import { Article } from "./model/article";
 import { Author } from "./model/author";
 import { Feed } from "./model/feed";
 import { Category } from "./model/category";
+import { User } from "./model/user";
 
 export const dataSource = new DataSource({
   type: "postgres",
@@ -13,7 +14,7 @@ export const dataSource = new DataSource({
   database: process.env.POSTGRES_DB,
   synchronize: true,
   logging: false,
-  entities: [Article, Author, Feed, Category],
+  entities: [Article, Author, Feed, Category, User],
   subscribers: [],
   migrations: [],
 });
