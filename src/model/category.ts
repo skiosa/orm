@@ -34,7 +34,7 @@ export class Category {
 }
 
 @InputType()
-export class InputCategory implements Partial<Category> {
+export class CategoryInput implements Partial<Category> {
   @Field((_type) => String)
   name!: string;
 }
