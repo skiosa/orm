@@ -1,0 +1,9 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.validate": ["javascript"],
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "javascript.format.semicolons": "insert"
+}
