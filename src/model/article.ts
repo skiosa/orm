@@ -33,13 +33,13 @@ export class Article {
   @JoinColumn()
   @Field((_type) => Author)
   @TypeormLoader()
-  author!: Author;
+  author?: Author;
 
   @ManyToOne(() => Feed, (feed) => feed.articles)
   @JoinColumn()
   @Field((_type) => Feed)
   @TypeormLoader()
-  feed!: Feed;
+  feed?: Feed;
 
   @ManyToMany(() => Category, (category) => category.articles)
   @JoinTable()
