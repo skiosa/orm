@@ -38,7 +38,7 @@ export class User {
 }
 
 @InputType()
-export class InputUser implements Partial<User> {
+export class UserInput implements Partial<User> {
   @Field((type) => ID)
   id!: string;
 }
