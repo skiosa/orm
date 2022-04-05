@@ -1,9 +1,9 @@
 {
   "name": "skiosa-orm",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "ORM Package for Skiosa Database",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.spec.ts'",
     "dev": "ts-node tests/dev_enviroment/app.ts",
