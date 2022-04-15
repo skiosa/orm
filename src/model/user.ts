@@ -1,5 +1,5 @@
 import { Field, ID, InputType, ObjectType } from "type-graphql";
-import { Column, Entity, ManyToMany, PrimaryColumn, JoinTable } from "typeorm";
+import { Entity, ManyToMany, PrimaryColumn, JoinTable } from "typeorm";
 import { Feed } from "./feed";
 import { Article } from "./article";
 import { Category } from "./category";
@@ -39,6 +39,6 @@ export class User {
 
 @InputType()
 export class UserInput implements Partial<User> {
-  @Field((type) => ID)
+  @Field((_type) => ID)
   id!: string;
 }
