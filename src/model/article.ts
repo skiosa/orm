@@ -29,6 +29,10 @@ export class Article {
   @Field((_type) => String)
   url!: string;
 
+  @Column({ default: Date.now() })
+  @Field((_type) => Date)
+  publishedAt!: Date;
+
   @ManyToOne(() => Author, (author) => author.articles)
   @JoinColumn()
   @Field((_type) => Author)

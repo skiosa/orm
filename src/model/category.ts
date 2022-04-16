@@ -12,7 +12,7 @@ export class Category {
   @Field((_type) => Int)
   id!: number;
 
-  @Column()
+  @Column({ unique: true })
   @Field((_type) => String)
   name!: string;
 
