@@ -1,7 +1,7 @@
-import { Field, InputType, Int, ObjectType } from "type-graphql";
+import { Field, Int, ObjectType } from "type-graphql";
 import { TypeormLoader } from "type-graphql-dataloader";
 import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { Author, AuthorInput } from "./author";
+import { Author } from "./author";
 import { Category } from "./category";
 import { Feed } from "./feed";
 import { User } from "./user";

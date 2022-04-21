@@ -1,4 +1,4 @@
-import { Field, ID, InputType, Int, ObjectType } from "type-graphql";
+import { Field, Int, ObjectType } from "type-graphql";
 import { TypeormLoader } from "type-graphql-dataloader";
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Article } from "./article";
