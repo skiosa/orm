@@ -8,8 +8,8 @@
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.spec.ts'",
     "dev": "ts-node tests/dev_enviroment/app.ts",
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
-    "lint": "eslint -c .eslintrc.json --fix ./src/**/*.ts ./tests/**/*.ts"
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"src/*.ts\"",
+    "lint": "eslint -c .eslintrc.json --fix ./src/**/*.ts ./tests/**/*.ts ./src/*.ts"
   },
   "repository": {
     "type": "git",

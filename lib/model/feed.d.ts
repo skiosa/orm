@@ -11,9 +11,3 @@ export declare class Feed {
     categories?: Category[];
     subscribers?: User[];
 }
-export declare class FeedInput implements Partial<Feed> {
-    link: string;
-    ttl: number;
-    name: string;
-    description: string;
-}

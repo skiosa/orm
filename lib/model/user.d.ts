@@ -8,6 +8,3 @@ export declare class User {
     likes?: Article[];
     preferences?: Category[];
 }
-export declare class UserInput implements Partial<User> {
-    id: string;
-}
