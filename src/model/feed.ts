@@ -1,4 +1,4 @@
-import { Field, ObjectType, InputType, Int } from "type-graphql";
+import { Field, ObjectType, Int } from "type-graphql";
 import { TypeormLoader } from "type-graphql-dataloader";
 import { Column, Entity, JoinTable, ManyToMany, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Article } from "./article";
@@ -43,19 +43,4 @@ export class Feed {
   @Field((_type) => [User])
   @TypeormLoader()
   subscribers?: User[];
-}
-
-@InputType()
-export class FeedInput implements Partial<Feed> {
-  @Field((_type) => String)
-  link!: string;
-
-  @Field((_type) => String)
-  ttl!: number;
-
-  @Field((_type) => String)
-  name!: string;
-
-  @Field((_type) => String)
-  description!: string;
 }

@@ -1,4 +1,4 @@
-import { Field, ID, InputType, ObjectType } from "type-graphql";
+import { Field, ID, ObjectType } from "type-graphql";
 import { Entity, ManyToMany, PrimaryColumn, JoinTable } from "typeorm";
 import { Feed } from "./feed";
 import { Article } from "./article";
@@ -35,10 +35,4 @@ export class User {
   @Field((_type) => [Category])
   @TypeormLoader()
   preferences?: Category[];
-}
-
-@InputType()
-export class UserInput implements Partial<User> {
-  @Field((_type) => ID)
-  id!: string;
 }

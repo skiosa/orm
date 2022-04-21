@@ -1,7 +1,7 @@
-import { Field, InputType, Int, ObjectType } from "type-graphql";
+import { Field, Int, ObjectType } from "type-graphql";
 import { TypeormLoader } from "type-graphql-dataloader";
 import { Column, Entity, JoinColumn, JoinTable, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { Author, AuthorInput } from "./author";
+import { Author } from "./author";
 import { Category } from "./category";
 import { Feed } from "./feed";
 import { User } from "./user";
@@ -60,25 +60,4 @@ export class Article {
   @Field((_type) => [User])
   @TypeormLoader()
   bookmarks?: [User];
-}
-
-@InputType()
-export class ArticleInput implements Partial<Article> {
-  @Field((_type) => String)
-  title!: string;
-
-  @Field((_type) => String)
-  description!: string;
-
-  @Field((_type) => String)
-  content!: string;
-
-  @Field((_type) => String)
-  url!: string;
-
-  @Field((_type) => AuthorInput)
-  author!: AuthorInput;
-
-  @Field((_type) => Feed)
-  feed!: Feed;
 }
