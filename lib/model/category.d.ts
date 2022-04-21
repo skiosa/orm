@@ -8,6 +8,3 @@ export declare class Category {
     feeds?: Feed[];
     users?: User[];
 }
-export declare class CategoryInput implements Partial<Category> {
-    name: string;
-}

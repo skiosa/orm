@@ -4,7 +4,3 @@ export declare class Author {
     name: string;
     articles?: Article[];
 }
-export declare class AuthorInput implements Partial<Author> {
-    id: number;
-    name: string;
-}
