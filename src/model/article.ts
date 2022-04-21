@@ -29,7 +29,7 @@ export class Article {
   @Field((_type) => String)
   url!: string;
 
-  @Column({ default: new Date() })
+  @Column({ default: "NOW()" })
   @Field((_type) => Date)
   publishedAt!: Date;
 
