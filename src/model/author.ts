@@ -19,12 +19,3 @@ export class Author {
   @TypeormLoader()
   articles?: Article[];
 }
-
-@InputType()
-export class AuthorInput implements Partial<Author> {
-  @Field((_type) => ID)
-  id!: number;
-
-  @Field((_type) => String)
-  name!: string;
-}

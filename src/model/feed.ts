@@ -44,18 +44,3 @@ export class Feed {
   @TypeormLoader()
   subscribers?: User[];
 }
-
-@InputType()
-export class FeedInput implements Partial<Feed> {
-  @Field((_type) => String)
-  link!: string;
-
-  @Field((_type) => String)
-  ttl!: number;
-
-  @Field((_type) => String)
-  name!: string;
-
-  @Field((_type) => String)
-  description!: string;
-}

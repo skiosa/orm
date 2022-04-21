@@ -61,24 +61,3 @@ export class Article {
   @TypeormLoader()
   bookmarks?: [User];
 }
-
-@InputType()
-export class ArticleInput implements Partial<Article> {
-  @Field((_type) => String)
-  title!: string;
-
-  @Field((_type) => String)
-  description!: string;
-
-  @Field((_type) => String)
-  content!: string;
-
-  @Field((_type) => String)
-  url!: string;
-
-  @Field((_type) => AuthorInput)
-  author!: AuthorInput;
-
-  @Field((_type) => Feed)
-  feed!: Feed;
-}

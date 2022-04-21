@@ -31,9 +31,3 @@ export class Category {
   @TypeormLoader()
   users?: User[];
 }
-
-@InputType()
-export class CategoryInput implements Partial<Category> {
-  @Field((_type) => String)
-  name!: string;
-}

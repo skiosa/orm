@@ -36,9 +36,3 @@ export class User {
   @TypeormLoader()
   preferences?: Category[];
 }
-
-@InputType()
-export class UserInput implements Partial<User> {
-  @Field((_type) => ID)
-  id!: string;
-}
