@@ -17,6 +17,8 @@ version-tag is optional and can be used to install a specific version of the pac
 
 Use `npm update` to update the package.
 
+*We will use a specific Version. To update the Version the easiest way to update is remove the package and reinstall it with the new Version tag*
+
 ### Usage in the Service
 To use the ORM in the Service, import the ORM classes and the ORM module.
 You have to set following environment variables to ensure connection to the database:
