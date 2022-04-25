@@ -17,6 +17,8 @@ services:
     environment:
       - POSTGRES_HOST=db
       - POSTGRES_PORT=5432
+      - POSTGRES_USER=typeORM
+      - POSTGRES_PASSWORD=Sk!0saTyp3=RM
       - POSTGRES_DB=skiosa
       - DEV_PORT=4001
     # Overrides default command so things don't shut down after the process ends.

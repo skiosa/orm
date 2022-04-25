@@ -7,6 +7,7 @@ export declare class Feed {
     ttl: number;
     name: string;
     description: string;
+    lastPolledAt: Date;
     articles?: Article[];
     categories?: Category[];
     subscribers?: User[];

@@ -28,6 +28,10 @@ export class Feed {
   @Field((_type) => String)
   description!: string;
 
+  @Column({ default: new Date("1970-01-01") })
+  @Field((_type) => Date)
+  lastPolledAt!: Date;
+
   @OneToMany(() => Article, (article) => article.feed)
   @Field((_type) => [Article])
   @TypeormLoader()
