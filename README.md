@@ -30,7 +30,7 @@ You have to set following environment variables to ensure connection to the data
  - POSTGRES_DB
 ```
 ## Development
-
+If questions arise ask [jeppard](https://github.com/jeppard).
 ### Devcontainer
 This repository has a Dockerfile and a Docker Compose file. These are Visual Studio Devcontainers.
 With the [Remote - Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension you can connect to the Docker Containers.
@@ -54,3 +54,4 @@ To build the project run `npm run build`
 To push a new version to git use `npm version <version>`
 For documentation of `version` look [here](https://docs.npmjs.com/cli/version)
 Remember to push both commits and tags to git.
+
